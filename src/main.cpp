@@ -3,7 +3,7 @@
 // Uses input from MQTT at /io.adafruit.com/samlewis02/dashboards/buttons
 // Uses two stage LED driver so IR PIN must be inverted
 //
-// Tested 27/5/18
+// Tested 8/6/18
 //
 /************************** Configuration ***********************************/
 #include <ESP8266mDNS.h>
@@ -30,6 +30,7 @@ AdafruitIO_Feed *bedroom = io.feed("bedroom"); // subscribe toggle switch input 
 
 ESP8266WebServer httpServer(80);
 ESP8266HTTPUpdateServer httpUpdater;
+// static IP address
 IPAddress ip(192,168,1,135);
 IPAddress gateway(192,168,1,1);
 IPAddress subnet(255,255,255,0);
